@@ -137,4 +137,30 @@ registry.redhat.io/amq7/amq-broker                            latest  690a9b4d4e
 registry.redhat.io/distributed-tracing/jaeger-ingester-rhel7  latest  fa735e06b2c2  2 weeks ago  242 MB
 [claudiol@fedora ocp-images]$ 
 ```
+### Example .airgap-ocp.yaml
 
+```
+rhnuser: "rhn-user"
+password: rhn-passwor"
+ocp-operators-dir: "/home/ocp-images/"
+ocp-disconnected-operators:
+  - registry.redhat.io/openshift4/ose-sriov-network-operator
+  - registry.redhat.io/openshift4/ose-ptp-operator
+  - registry.redhat.io/openshift4/ose-template-service-broker-operator
+  - registry.redhat.io/openshift4/ose-ansible-service-broker-operator
+  - registry.redhat.io/ocs4/ocs-rhel8-operator
+  - registry.redhat.io/ocs4/ocs-olm-rhel8-operator
+  - registry.redhat.io/openshift4/ose-cluster-nfd-operator
+  - registry.redhat.io/openshift4/ose-metering-ansible-operator
+  - registry.redhat.io/openshift4/ose-local-storage-operator
+  - registry.redhat.io/openshift4/ose-elasticsearch-operator
+  - registry.redhat.io/openshift4/ose-cluster-logging-operator
+  - registry.redhat.io/openshift-service-mesh/istio-rhel8-operator
+  - registry.redhat.io/openshift-serverless-1/serverless-rhel8-operator
+  - registry.redhat.io/openshift-service-mesh/kiali-rhel7-operator
+  - registry.redhat.io/codeready-workspaces/crw-2-rhel8-operator
+  - registry.redhat.io/amq7/amq-streams-rhel7-operator
+  - registry.redhat.io/3scale-amp2/3scale-rhel7-operator
+  - registry.redhat.io/3scale-amp2/apicast-rhel7-operator
+  - registry.redhat.io/openshift4/ose-clusterresourceoverride-rhel7-operator
+```
